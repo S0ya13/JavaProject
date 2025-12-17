@@ -3,8 +3,7 @@ package pl.edu.vistula.second_project.product.repository;
 import org.springframework.stereotype.Repository;
 import pl.edu.vistula.second_project.product.domain.Product;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Repository
 public class ProductRepository {
@@ -22,5 +21,13 @@ public class ProductRepository {
         map.put(counter, entity);
         counter++;
         return entity;
+    }
+
+    public Optional<Product> findById(Long id) {
+        return Optional.ofNullable(map.get(id));
+    }
+
+    public List<Product> findAll() {
+        return new ArrayList<>(map.values());
     }
 }
