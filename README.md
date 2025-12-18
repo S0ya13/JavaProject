@@ -4,22 +4,22 @@ A comprehensive university project demonstrating RESTful CRUD operations using S
 
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Running the Application](#running-the-application)
-- [API Documentation with Swagger](#api-documentation-with-swagger)
-- [H2 Database Console](#h2-database-console)
-- [API Endpoints](#api-endpoints)
-- [Testing with Postman](#testing-with-postman)
-- [CRUD Operations Guide](#crud-operations-guide)
-- [Database Schema](#database-schema)
-- [Screenshots](#screenshots)
-- [Troubleshooting](#troubleshooting)
-- [Contributors](#contributors)
-- [License](#license)
+- [Project Overview](#-project-overview)
+- [Technologies Used](#-technologies-used)
+- [Project Structure](#-project-structure)
+- [Prerequisites](#-prerequisites)
+- [Installation & Setup](#-installation--setup)
+- [Running the Application](#-running-the-application)
+- [API Documentation with Swagger](#-api-documentation-with-swagger)
+- [H2 Database Console](#-h2-database-console)
+- [API Endpoints](#-api-endpoints)
+- [Testing with Postman](#-testing-with-postman)
+- [CRUD Operations Guide](#-crud-operations-guide)
+- [Database Schema](#-database-schema)
+- [Screenshots](#-screenshots)
+- [Troubleshooting](#-troubleshooting)
+- [Contributors](#-contributors)
+- [License](#-license)
 
 ---
 
