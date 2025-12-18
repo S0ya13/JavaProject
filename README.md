@@ -57,7 +57,7 @@ The application allows users to test all implemented methods (create, modify, de
 ```
 JavaProject/
 ├── src/
-│   ├── main/
+│   └── main/
 │       ├── java/
 │       │   └── pl.edu.vistula.second_project/
 │       │       │── product/
@@ -186,7 +186,7 @@ mvn spring-boot:run
 ### Using JAR file
 
 ```bash
-java -jar target/JavaProject-0.0.1-SNAPSHOT.jar
+java -jar target/JavaProject-1.0.0.jar
 ```
 
 ### Using IDE
@@ -211,8 +211,8 @@ After starting the application, navigate to:
 
 **http://localhost:8080/swagger-ui/index.html**
 
-[**SCREENSHOT PLACEHOLDER 1: Swagger UI Home Page**]
-*Description: Main Swagger UI interface showing all available API endpoints*
+![**Swagger UI Home Page**](images/01-swagger-ui-home.png)
+*Main Swagger UI interface showing all available API endpoints*
 
 ### Swagger Features
 
@@ -227,8 +227,8 @@ Access the raw OpenAPI specification at:
 
 **http://localhost:8080/v3/api-docs**
 
-[**SCREENSHOT PLACEHOLDER 2: OpenAPI JSON Response**]
-*Description: Raw JSON output of API documentation*
+![**OpenAPI JSON Response**](images/02-swagger-ui-api-docs.png)
+*Raw JSON output of API documentation*
 
 ---
 
@@ -238,8 +238,8 @@ Access the raw OpenAPI specification at:
 
 Navigate to: **http://localhost:8080/console/**
 
-[**SCREENSHOT PLACEHOLDER 3: H2 Console Login Screen**]
-*Description: H2 database console login page*
+![**H2 Console Login Screen**](images/03-h2-console-login.png.png)
+*H2 database console login page*
 
 ### Login Credentials
 
@@ -251,8 +251,8 @@ Use the following settings to connect:
 | **User Name** | `sa` |
 | **Password** | *(leave empty)* |
 
-[**SCREENSHOT PLACEHOLDER 4: H2 Console Connected View**]
-*Description: H2 console after successful login showing database tables*
+![**H2 Console Connected View**](images/04-h2-console-connected.png)
+*H2 console after successful login showing database tables*
 
 ### Viewing Data
 
@@ -262,8 +262,8 @@ Once logged in, you can:
 - Observe changes after CRUD operations
 - Verify database schema and constraints
 
-[**SCREENSHOT PLACEHOLDER 5: SQL Query Results in H2 Console**]
-*Description: Result of SELECT query showing product data*
+![**SQL Query Results in H2 Console**](images/05-h2-console-query-results.png)
+*Result of SELECT query showing product data*
 
 ---
 
@@ -384,8 +384,8 @@ DELETE {{base_url}}/api/v1/products/{id}
 
 #### Scenario 1: Create a Product (POST)
 
-[**SCREENSHOT PLACEHOLDER 6: Postman POST Request**]
-*Description: Postman showing POST request to create a new product with request body*
+![**Postman POST Request**](images/06-postman-post-request.png)
+*Postman showing POST request to create a new product with request body*
 
 **Steps:**
 1. Select **POST** method
@@ -400,13 +400,13 @@ DELETE {{base_url}}/api/v1/products/{id}
 5. Click **Send**
 6. Verify response status: `201 Created`
 
-[**SCREENSHOT PLACEHOLDER 7: Postman POST Response**]
-*Description: Response showing successfully created product with generated ID*
+![**Postman POST Response**](images/07-postman-post-response.png)
+*Response showing successfully created product with generated ID*
 
 #### Scenario 2: Retrieve All Products (GET)
 
-[**SCREENSHOT PLACEHOLDER 8: Postman GET All Request**]
-*Description: GET request to retrieve all products*
+![**Postman GET All Request**](images/08-postman-get-all-request.png)
+*GET request to retrieve all products*
 
 **Steps:**
 1. Select **GET** method
@@ -414,61 +414,61 @@ DELETE {{base_url}}/api/v1/products/{id}
 3. Click **Send**
 4. Verify response contains array of products
 
-[**SCREENSHOT PLACEHOLDER 9: Postman GET All Response**]
-*Description: Response showing list of all products in JSON format*
+![**Postman GET All Response**](images/09-postman-get-all-response.png)
+*Response showing list of all products in JSON format*
 
 #### Scenario 3: Retrieve Single Product (GET)
 
-[**SCREENSHOT PLACEHOLDER 10: Postman GET by ID Request**]
-*Description: GET request with product ID in URL*
+![**Postman GET by ID Request**](images/10-postman-get-by-id.png)
+*GET request with product ID in URL*
 
 **Steps:**
 1. Select **GET** method
-2. Enter URL: `{{base_url}}/api/v1/products/1`
+2. Enter URL: `{{base_url}}/api/v1/products/{id}`
 3. Click **Send**
 4. Verify response contains specific product
 
 #### Scenario 4: Update Product (PUT)
 
-[**SCREENSHOT PLACEHOLDER 11: Postman PUT Request**]
-*Description: PUT request with updated product data*
+![**Postman PUT Request**](images/11-postman-put-request.png)
+*PUT request with updated product data*
 
 **Steps:**
 1. Select **PUT** method
-2. Enter URL: `{{base_url}}/api/v1/products/1`
+2. Enter URL: `{{base_url}}/api/v1/products/{id}`
 3. Add request body with updated fields
 4. Click **Send**
 5. Verify updated data in response
 
-[**SCREENSHOT PLACEHOLDER 12: Postman PUT Response**]
-*Description: Response showing successfully updated product*
+![**Postman PUT Response**](images/12-postman-put-response.png)
+*Response showing successfully updated product*
 
 #### Scenario 5: Delete Product (DELETE)
 
-[**SCREENSHOT PLACEHOLDER 13: Postman DELETE Request**]
-*Description: DELETE request for specific product*
+![**Postman DELETE Request**](images/13-postman-delete-request.png)
+*DELETE request for specific product*
 
 **Steps:**
 1. Select **DELETE** method
-2. Enter URL: `{{base_url}}/api/v1/products/1`
+2. Enter URL: `{{base_url}}/api/v1/products/{id}`
 3. Click **Send**
 4. Verify deletion message
 
-[**SCREENSHOT PLACEHOLDER 14: Postman DELETE Response**]
-*Description: Response confirming successful deletion*
+![**Postman DELETE Response**](images/14-postman-delete-response.png)
+*Response confirming successful deletion*
 
 ### Verifying in H2 Database
 
 After each operation, check the H2 console to verify database changes:
 
-[**SCREENSHOT PLACEHOLDER 15: H2 Console After CREATE**]
-*Description: Database table showing newly inserted record*
+![**H2 Console After CREATE**](images/15-h2-after-create.png)
+*Database table showing newly inserted record*
 
-[**SCREENSHOT PLACEHOLDER 16: H2 Console After UPDATE**]
-*Description: Database table showing modified record*
+![**H2 Console After UPDATE**](images/16-h2-after-update.png)
+*Database table showing modified record*
 
-[**SCREENSHOT PLACEHOLDER 17: H2 Console After DELETE**]
-*Description: Database table with record removed*
+![**H2 Console After DELETE**](images/17-h2-after-delete.png)
+*Database table with record removed*
 
 ---
 
